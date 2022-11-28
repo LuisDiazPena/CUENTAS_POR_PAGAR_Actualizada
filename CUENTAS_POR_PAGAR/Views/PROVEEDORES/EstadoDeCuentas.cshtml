@@ -1,0 +1,138 @@
+﻿@model IEnumerable<CUENTAS_POR_PAGAR.Models.ESTADODECUENTAS>
+
+@{
+    ViewData["Title"] = "Estado de Cuentas";
+}
+
+<h1>Estado de Cuentas</h1>
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Detalle de cuentas</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <table id="example1" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        NOMBRE
+                    </th>
+                    <th>
+                        APELLIDOS
+                    </th>
+                    <th>
+                        FECHA
+                    </th>
+                    <th>
+                        DEBITO
+                    </th>
+                    <th>
+                        CREDITO
+                    </th>
+                    <th>
+                        ESTADO
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (CUENTAS_POR_PAGAR.Models.ESTADODECUENTAS d in Model!)
+                {
+                    <tr>
+                        <td>
+                            @d.NOMBRES
+                        </td>
+                        <td>
+                            @d.APELLIDOS
+                        </td>
+                        <td>
+                            @d.FECHA
+                        </td>
+                        <td>
+                            @d.DEBITO
+                        </td>
+                        <td>
+                            @d.CREDITO
+                        </td>
+                        <td>
+                            @d.ESTADO
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>
+                        NOMBRE
+                    </th>
+                    <th>
+                        APELLIDOS
+                    </th>
+                    <th>
+                        FECHA
+                    </th>
+                    <th>
+                        DEBITO
+                    </th>
+                    <th>
+                        CREDITO
+                    </th>
+                    <th>
+                        ESTADO
+                    </th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <!-- /.card-body -->
+</div>
+    <!-- /.card -->
+    @*<table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PROVEEDORES.NOMBRES)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PROVEEDORES.APELLIDOS)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FECHA)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DEBITO)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CREDITO)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ESTADO)
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PROVEEDORES.NOMBRES)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PROVEEDORES.APELLIDOS)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FECHA)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DEBITO)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CREDITO)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ESTADO)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>*@

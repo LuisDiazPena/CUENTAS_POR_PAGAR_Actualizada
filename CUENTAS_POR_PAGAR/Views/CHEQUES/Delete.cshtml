@@ -1,0 +1,45 @@
+﻿@model CUENTAS_POR_PAGAR.Models.CHEQUES
+
+@{
+    ViewData["Title"] = "Eliminar";
+}
+
+<h1>Eliminar</h1>
+
+<h3>Estas seguro de que quieres eliminar este:</h3>
+<div>
+    <h4>CHEQUES</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CODFACTURA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CODFACTURA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.VALORCHEQUE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.VALORCHEQUE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FECHACHEQUE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FECHACHEQUE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BANCO)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BANCO)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="CHEQUESID" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index">Volver a la lista</a>
+    </form>
+</div>

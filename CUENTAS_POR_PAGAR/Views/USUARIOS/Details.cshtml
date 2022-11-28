@@ -1,0 +1,30 @@
+﻿@model CUENTAS_POR_PAGAR.Models.USUARIOS
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>USUARIOS</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.USUARIO)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.USUARIO)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CLAVE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CLAVE)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.USUARIOSID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

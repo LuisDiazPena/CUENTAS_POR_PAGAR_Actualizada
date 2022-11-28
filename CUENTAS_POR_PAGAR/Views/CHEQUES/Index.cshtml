@@ -1,0 +1,53 @@
+﻿@model IEnumerable<CUENTAS_POR_PAGAR.Models.CHEQUES>
+
+@{
+    ViewData["Title"] = "Mantenimiento";
+}
+
+<h1>Mantenimiento de cheques</h1>
+
+<p>
+    <a asp-action="Create">Crear nuevo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CODFACTURA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VALORCHEQUE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FECHACHEQUE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BANCO)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CODFACTURA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VALORCHEQUE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FECHACHEQUE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BANCO)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CHEQUESID">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.CHEQUESID">Detalle</a> |
+                <a asp-action="Delete" asp-route-id="@item.CHEQUESID">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

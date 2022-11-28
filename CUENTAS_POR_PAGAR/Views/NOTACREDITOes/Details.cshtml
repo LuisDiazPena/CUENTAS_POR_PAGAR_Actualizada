@@ -1,0 +1,36 @@
+﻿@model CUENTAS_POR_PAGAR.Models.NOTACREDITO
+
+@{
+    ViewData["Title"] = "Detalles";
+}
+
+<h1>Detalles</h1>
+
+<div>
+    <h4>NOTA DE CREDITO</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CODPROVEEDOR)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CODPROVEEDOR)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CANTIDAD)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CANTIDAD)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DESCRIPCION)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DESCRIPCION)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.NOTACREDITOID">Editar</a> |
+    <a asp-action="Index">Volver a la lista</a>
+</div>

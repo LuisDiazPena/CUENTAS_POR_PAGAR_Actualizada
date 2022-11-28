@@ -1,0 +1,47 @@
+﻿@model IEnumerable<CUENTAS_POR_PAGAR.Models.NOTACREDITO>
+
+@{
+    ViewData["Title"] = "Mantenimiento";
+}
+
+<h1>Mantenimiento de Nota de Credito</h1>
+
+<p>
+    <a asp-action="Create">Crear Nueva</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CODPROVEEDOR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CANTIDAD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DESCRIPCION)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CODPROVEEDOR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CANTIDAD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DESCRIPCION)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.NOTACREDITOID">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.NOTACREDITOID">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.NOTACREDITOID">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

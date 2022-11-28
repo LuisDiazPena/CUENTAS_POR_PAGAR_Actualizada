@@ -1,0 +1,57 @@
+﻿@model CUENTAS_POR_PAGAR.Models.PROVEEDORES
+
+@{
+    ViewData["Title"] = "Eliminar";
+}
+
+<h1>Eliminar</h1>
+
+<h3>Estas seguro de que quieres eliminar este?</h3>
+<div>
+    <h4>PROVEEDOR</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NOMBRES)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NOMBRES)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.APELLIDOS)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.APELLIDOS)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DIRECCION)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DIRECCION)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CIUDAD)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CIUDAD)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TELEFONO)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TELEFONO)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EMPRESA)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EMPRESA)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Volver a la lista</a>
+    </form>
+</div>

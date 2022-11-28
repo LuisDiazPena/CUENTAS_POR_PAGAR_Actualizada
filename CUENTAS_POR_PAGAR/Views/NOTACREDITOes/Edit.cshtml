@@ -1,0 +1,44 @@
+﻿@model CUENTAS_POR_PAGAR.Models.NOTACREDITO
+
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<h1>Editar</h1>
+
+<h4>NOTA DE CREDITO</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="NOTACREDITOID" />
+            <div class="form-group">
+                <label asp-for="CODPROVEEDOR" class="control-label"></label>
+                <input asp-for="CODPROVEEDOR" class="form-control" />
+                <span asp-validation-for="CODPROVEEDOR" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CANTIDAD" class="control-label"></label>
+                <input asp-for="CANTIDAD" class="form-control" />
+                <span asp-validation-for="CANTIDAD" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DESCRIPCION" class="control-label"></label>
+                <input asp-for="DESCRIPCION" class="form-control" />
+                <span asp-validation-for="DESCRIPCION" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver a la lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
